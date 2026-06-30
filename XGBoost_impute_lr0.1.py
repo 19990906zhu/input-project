@@ -10,7 +10,7 @@ warnings.filterwarnings("ignore")
 # ==========================
 # 1. 加载数据（只需修改这里）
 # ==========================
-data_path = r"D:\萝卜投稿专用\Original Research - Spinal Infection Following Internal Fixation Surgery\插值选择\训练集_原始数据.xlsx"
+data_path = r"D:\萝卜投稿专用\Original Research - Spinal Infection Following Internal Fixation Surgery\插值选择\外部验证集_原始数据.xlsx"
 data = pd.read_excel(data_path)
 
 # ==========================
@@ -62,7 +62,7 @@ imputed_df = imputed_df[data.columns]
 # ==========================
 # 5. 导出最终插补表
 # ==========================
-output_path = r"D:\萝卜投稿专用\Original Research - Spinal Infection Following Internal Fixation Surgery\插值选择\Xgboost\lr=0.1\XGBoost_Imputed_lr0.1_no_Infection_predictor.xlsx"
+output_path = r"D:\萝卜投稿专用\Original Research - Spinal Infection Following Internal Fixation Surgery\插值选择\Xgboost\lr=0.1\外部验证集的处理\XGBoost_Imputed_lr0.1_external_test.xlsx"
 imputed_df.to_excel(output_path, index=False)
 
 print("完成：Infection 未作为预测因子参与插补，只在最后原样拼回。")
